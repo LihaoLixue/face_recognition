@@ -81,6 +81,7 @@ def load_image_file(file, mode='RGB'):
     :return: image contents as numpy array
     """
     im = PIL.Image.open(file)
+    im.show()
     if mode:
         im = im.convert(mode)
     return np.array(im)
